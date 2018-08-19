@@ -48,5 +48,11 @@ namespace Fluent
             layout.Children.Add(view.Invoke());
             return layout;
         }
+
+        public static Layout<View> AddContent(this Layout<View> layout, params View[] views)
+        {
+            views.ForEach(x => layout.Children.Add(x));
+            return layout;
+        }
     }
 }
