@@ -15,12 +15,13 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FluentDemo.iOS", "demo\Flue
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FluentDemo.UWP", "demo\FluentDemo\FluentDemo.UWP\FluentDemo.UWP.csproj", "{4A460537-DBEF-4744-9510-9D43FFF454FE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FluentDemo", "demo\FluentDemo\FluentDemo\FluentDemo.csproj", "{A3BA9044-7E52-428D-83AC-EED6576E99DE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FluentDemo", "demo\FluentDemo\FluentDemo\FluentDemo.csproj", "{A3BA9044-7E52-428D-83AC-EED6576E99DE}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "nuget", "nuget", "{1C0DDB36-2096-404C-8D31-583A28CA3738}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{760A4876-601E-46D0-8AC2-28FDEFF966B6}"
 	ProjectSection(SolutionItems) = preProject
+		README.en.md = README.en.md
 		README.md = README.md
 	EndProjectSection
 EndProject
