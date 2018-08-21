@@ -4,6 +4,30 @@ namespace Fluent
 {
     public static class EntryExtensions
     {
+        public static Entry FontAttributes(this Entry entry, FontAttributes attributes)
+        {
+            entry.FontAttributes = attributes;
+            return entry;
+        }
+        
+        public static Entry FontFamily(this Entry entry, string fontFamily)
+        {
+            entry.FontFamily = fontFamily;
+            return entry;
+        }
+
+        public static Entry FontSize(this Entry entry, double fontSize)
+        {
+            entry.FontSize = fontSize;
+            return entry;
+        }
+        
+        public static Entry HorizontalTextAlignment(this Entry entry, TextAlignment alignment)
+        {
+            entry.HorizontalTextAlignment = alignment;
+            return entry;
+        }
+        
         public static Entry IsPassword(this Entry entry, bool isPassword)
         {
             entry.IsPassword = isPassword;
@@ -29,38 +53,10 @@ namespace Fluent
             return entry;
         }
 
-        #region TextProperties
-
-        public static Entry FontAttributes(this Entry entry, FontAttributes attributes)
-        {
-            entry.FontAttributes = attributes;
-            return entry;
-        }
-
-        public static Entry FontFamily(this Entry entry, string fontFamily)
-        {
-            entry.FontFamily = fontFamily;
-            return entry;
-        }
-
-        public static Entry FontSize(this Entry entry, double fontSize)
-        {
-            entry.FontSize = fontSize;
-            return entry;
-        }
-
         public static Entry TextColor(this Entry entry, Color textColor)
         {
             entry.TextColor = textColor;
             return entry;
         }
-
-        public static Entry HorizontalTextAlignment(this Entry entry, TextAlignment alignment)
-        {
-            entry.HorizontalTextAlignment = alignment;
-            return entry;
-        }
-
-        #endregion
     }
 }
