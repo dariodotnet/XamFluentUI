@@ -48,18 +48,6 @@ namespace Fluent
             return button;
         }
 
-        public static Button Text(this Button button, string text)
-        {
-            button.Text = text;
-            return button;
-        }
-
-        public static Button TextColor(this Button button, Color textColor)
-        {
-            button.TextColor = textColor;
-            return button;
-        }
-
         public static Button Text(this Button button, string text, Color textColor = default(Color))
         {
             button.Text = text;
