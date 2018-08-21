@@ -24,5 +24,17 @@ namespace Fluent
             effects.Invoke().ForEach(x => element.Effects.Add(x));
             return element;
         }
+        
+        public static T Parent<T>(this T element, Element parent) where T : Element
+        {
+            element.Parent = parent;
+            return element;
+        }
+        
+        public static T StyleId<T>(this T element, string id) where T : Element
+        {
+            element.StyleId = id;
+            return element;
+        }
     }
 }
