@@ -18,9 +18,33 @@ namespace Fluent
             if (columns > 1)
             {
                 grid.ColumnDefinitions = new ColumnDefinitionCollection();
-                for (int i = 0; i < rows; i++)
+                for (var i = 0; i < rows; i++)
                 {
                     grid.ColumnDefinitions.Add(new ColumnDefinition() { Width = GridLength.Star });
+                }
+            }
+            return grid;
+        }
+
+        public static Grid AddRows(this Grid grid, int rows = 0)
+        {
+            if (rows > 0)
+            {
+                for (var i = 0; i < rows; i++)
+                {
+                    grid.RowDefinitions.Add(new RowDefinition { Height = GridLength.Star });
+                }
+            }
+            return grid;
+        }
+
+        public static Grid AddColumns(this Grid grid, int columns = 0)
+        {
+            if (columns > 0)
+            {
+                for (var i = 0; i < columns; i++)
+                {
+                    grid.ColumnDefinitions.Add(new ColumnDefinition { Width = GridLength.Star });
                 }
             }
             return grid;
