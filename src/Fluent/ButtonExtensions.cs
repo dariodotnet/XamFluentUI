@@ -22,6 +22,18 @@ namespace Fluent
             return button;
         }
 
+        public static Button ContentLayout(this Button button, Button.ButtonContentLayout layout)
+        {
+            button.ContentLayout = layout;
+            return button;
+        }
+
+        public static Button Image(this Button button, FileImageSource image)
+        {
+            button.Image = image;
+            return button;
+        }
+
         #region TextProperties
 
         public static Button Font(this Button button, Font font)
