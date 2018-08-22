@@ -5,12 +5,12 @@
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <Authors>Dario Alonso</Authors>
     <Description>Fluent API UI to Xamarin Forms</Description>
-    <Version>1.1.0</Version>
+    <Version>1.1.1</Version>
     <PackageProjectUrl>https://github.com/dariodotnet/XamFluentUI</PackageProjectUrl>
     <RepositoryUrl>https://github.com/dariodotnet/XamFluentUI</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
     <PackageTags>XamarinForms, FluentUI, UI</PackageTags>
-    <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+    <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
     <PackageLicenseUrl>https://github.com/dariodotnet/XamFluentUI/blob/master/LICENSE</PackageLicenseUrl>
     <PackageId>XamFluentUI</PackageId>
     <Product>XamFluentUI</Product>
