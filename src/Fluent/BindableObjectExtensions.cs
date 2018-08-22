@@ -9,5 +9,11 @@ namespace Fluent
             obj.BindingContext = context;
             return obj;
         }
+
+        public static BindableObject Binding(this BindableObject bindableObject, BindableProperty targetProperty, BindingBase binding)
+        {
+            bindableObject.SetBinding(targetProperty, binding);
+            return bindableObject;
+        }
     }
 }
