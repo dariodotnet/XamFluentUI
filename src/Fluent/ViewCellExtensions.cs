@@ -11,13 +11,4 @@ namespace Fluent
             return viewCell;
         }
     }
-
-    public static class WebViewExtensions
-    {
-        public static WebView Source(this WebView webView, WebViewSource source)
-        {
-            webView.Source = source;
-            return webView;
-        }
-    }
 }
