@@ -57,10 +57,24 @@ namespace Fluent
             return visual;
         }
 
+        public static T SizeRequest<T>(this T visual, double uniform) where T : VisualElement
+        {
+            visual.WidthRequest = uniform;
+            visual.HeightRequest = uniform;
+            return visual;
+        }
+
         public static T MinimumSizeRequest<T>(this T visual, double widthRequest, double heighRequest) where T : VisualElement
         {
             visual.MinimumWidthRequest = widthRequest;
             visual.MinimumHeightRequest = heighRequest;
+            return visual;
+        }
+
+        public static T MinimumSizeRequest<T>(this T visual, double uniform) where T : VisualElement
+        {
+            visual.MinimumWidthRequest = uniform;
+            visual.MinimumHeightRequest = uniform;
             return visual;
         }
 
