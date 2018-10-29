@@ -16,6 +16,12 @@ namespace Fluent
             return list;
         }
 
+        public static ListView HasUnevenRows(this ListView list, bool has)
+        {
+            list.HasUnevenRows = has;
+            return list;
+        }
+
         public static ListView Header(this ListView list, object header)
         {
             list.Header = header;
