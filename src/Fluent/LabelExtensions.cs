@@ -24,6 +24,18 @@ namespace Fluent
             return label;
         }
 
+        public static Label MaxLines(this Label label, int maxLines)
+        {
+            label.MaxLines = maxLines;
+            return label;
+        }
+
+        public static Label TextDecorations(this Label label, TextDecorations decorations)
+        {
+            label.TextDecorations = decorations;
+            return label;
+        }
+
         #region TextProperties
 
         public static Label FontAttributes(this Label label, FontAttributes attributes)
