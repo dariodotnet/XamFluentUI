@@ -16,6 +16,24 @@ namespace Fluent
             return span;
         }
 
+        public static Span ForegroundColor(this Span span, Color color)
+        {
+            span.ForegroundColor = color;
+            return span;
+        }
+
+        public static Span LineHeight(this Span span, double height)
+        {
+            span.LineHeight = height;
+            return span;
+        }
+
+        public static Span TextDecorations(this Span span, TextDecorations decorations)
+        {
+            span.TextDecorations = decorations;
+            return span;
+        }
+
         #region TextProperties
 
         public static Span FontAttributes(this Span span, FontAttributes attributes)
