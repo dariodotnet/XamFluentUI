@@ -1,4 +1,5 @@
-﻿using Xamarin.Forms;
+﻿using System;
+using Xamarin.Forms;
 
 namespace Fluent
 {
@@ -68,5 +69,41 @@ namespace Fluent
         }
 
         #endregion
+
+        public static Button ClickedEvent(this Button button, Action<object> action, object parameter)
+        {
+            button.Clicked += (sender, args) => { action.Invoke(parameter); };
+            return button;
+        }
+
+        public static Button ClickedEvent(this Button button, Action action)
+        {
+            button.Clicked += (sender, args) => { action.Invoke(); };
+            return button;
+        }
+
+        public static Button PressedEvent(this Button button, Action<object> action, object parameter)
+        {
+            button.Pressed += (sender, args) => { action.Invoke(parameter); };
+            return button;
+        }
+
+        public static Button PressedEvent(this Button button, Action action)
+        {
+            button.Pressed += (sender, args) => { action.Invoke(); };
+            return button;
+        }
+
+        public static Button ReleasedEvent(this Button button, Action<object> action, object parameter)
+        {
+            button.Released += (sender, args) => { action.Invoke(parameter); };
+            return button;
+        }
+
+        public static Button ReleasedEvent(this Button button, Action action)
+        {
+            button.Released += (sender, args) => { action.Invoke(); };
+            return button;
+        }
     }
 }
