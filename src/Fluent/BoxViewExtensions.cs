@@ -9,5 +9,11 @@ namespace Fluent
             box.Color = color;
             return box;
         }
+
+        public static BoxView CornerRadius(this BoxView box, CornerRadius radius)
+        {
+            box.CornerRadius = radius;
+            return box;
+        }
     }
 }

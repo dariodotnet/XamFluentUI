@@ -35,6 +35,12 @@ namespace Fluent
             return button;
         }
 
+        public static Button Padding(this Button button, Thickness padding)
+        {
+            button.Padding = padding;
+            return button;
+        }
+
         #region TextProperties
 
         public static Button Font(this Button button, Font font)

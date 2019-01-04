@@ -9,13 +9,13 @@ namespace Fluent
             frame.BorderColor = color;
             return frame;
         }
-        
+
         public static Frame CornerRadius(this Frame frame, float radius)
         {
             frame.CornerRadius = radius;
             return frame;
         }
-        
+
         public static Frame HasShadow(this Frame frame, bool hasShadow)
         {
             frame.HasShadow = hasShadow;
