@@ -9,13 +9,13 @@ namespace Fluent
             cell.HorizontalTextAlignment = alignment;
             return cell;
         }
-        
+
         public static EntryCell Keyboard(this EntryCell cell, Keyboard keyboard)
         {
             cell.Keyboard = keyboard;
             return cell;
         }
-        
+
         public static EntryCell Text(this EntryCell cell, string text, string label = "", string placeholder = "", Color color = default(Color))
         {
             cell.Label = label;

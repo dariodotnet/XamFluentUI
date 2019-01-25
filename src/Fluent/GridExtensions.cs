@@ -13,29 +13,29 @@ namespace Fluent
 
             if (columns > 1)
                 grid = AddColumns(grid, columns);
-                
+
             return grid;
         }
 
         public static Grid AddRows(this Grid grid, int rows = 0)
         {
-            if (rows < 1) 
+            if (rows < 1)
                 return grid;
-            
+
             for (var i = 0; i < rows; i++)
                 grid.RowDefinitions.Add(new RowDefinition { Height = GridLength.Star });
-            
+
             return grid;
         }
 
         public static Grid AddColumns(this Grid grid, int columns = 0)
         {
-            if (columns < 1) 
+            if (columns < 1)
                 return grid;
-            
+
             for (var i = 0; i < columns; i++)
                 grid.ColumnDefinitions.Add(new ColumnDefinition { Width = GridLength.Star });
-            
+
             return grid;
         }
 

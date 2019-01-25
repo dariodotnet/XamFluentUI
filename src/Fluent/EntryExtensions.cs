@@ -1,4 +1,5 @@
-﻿using Xamarin.Forms;
+﻿using System.Windows.Input;
+using Xamarin.Forms;
 
 namespace Fluent
 {
@@ -59,6 +60,31 @@ namespace Fluent
             return entry;
         }
 
+        public static Entry PlaceholderColor(this Entry entry, Color color)
+        {
+            entry.PlaceholderColor = color;
+            return entry;
+        }
+
+        public static Entry ReturnCommand(this Entry entry, ICommand command)
+        {
+            entry.ReturnCommand = command;
+            return entry;
+        }
+
+        public static Entry ReturnCommand(this Entry entry, ICommand command, object parameter)
+        {
+            entry.ReturnCommand = command;
+            entry.ReturnCommandParameter = parameter;
+            return entry;
+        }
+
+        public static Entry ReturnCommandParameter(this Entry entry, object parameter)
+        {
+            entry.ReturnCommandParameter = parameter;
+            return entry;
+        }
+
         public static Entry ReturnType(this Entry entry, ReturnType returnType)
         {
             entry.ReturnType = returnType;
@@ -68,6 +94,19 @@ namespace Fluent
         public static Entry SelectionLength(this Entry entry, int length)
         {
             entry.SelectionLength = length;
+            return entry;
+        }
+
+        public static Entry Text(this Entry entry, string text)
+        {
+            entry.Text = text;
+            return entry;
+        }
+
+        public static Entry Text(this Entry entry, string text, Color color)
+        {
+            entry.Text = text;
+            entry.TextColor = color;
             return entry;
         }
 

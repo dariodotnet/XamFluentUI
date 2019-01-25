@@ -29,6 +29,13 @@ namespace Fluent
             return imageButton;
         }
 
+        public static ImageButton Command(this ImageButton imageButton, ICommand command, object parameter)
+        {
+            imageButton.Command = command;
+            imageButton.CommandParameter = parameter;
+            return imageButton;
+        }
+
         public static ImageButton CommandParameter(this ImageButton imageButton, object parameter)
         {
             imageButton.CommandParameter = parameter;
