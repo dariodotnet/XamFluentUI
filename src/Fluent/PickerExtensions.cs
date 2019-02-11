@@ -10,6 +10,19 @@ namespace Fluent
             return picker;
         }
 
+        public static Picker Title(this Picker picker, string title, Color color)
+        {
+            picker.Title = title;
+            picker.TitleColor = color;
+            return picker;
+        }
+
+        public static Picker TitleColor(this Picker picker, Color color)
+        {
+            picker.TitleColor = color;
+            return picker;
+        }
+
         #region TextProperties
 
         public static Picker FontAttributes(this Picker picker, FontAttributes attributes)
