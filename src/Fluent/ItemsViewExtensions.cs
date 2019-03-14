@@ -29,6 +29,18 @@ namespace Fluent
             return element;
         }
 
+        public static T AddLogicalChild<T>(this T itemView, Element element) where T : ItemsView
+        {
+            itemView.AddLogicalChild(element);
+            return itemView;
+        }
+
+        public static T RemoveLogicalChild<T>(this T itemView, Element element) where T : ItemsView
+        {
+            itemView.RemoveLogicalChild(element);
+            return itemView;
+        }
+
         public static T ItemTemplate<T>(this T element, DataTemplate template) where T : ItemsView
         {
             element.ItemTemplate = template;
