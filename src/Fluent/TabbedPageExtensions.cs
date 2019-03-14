@@ -15,5 +15,17 @@ namespace Fluent
             page.BarTextColor = color;
             return page;
         }
+
+        public static TabbedPage SelectedTabColor(this TabbedPage page, Color color)
+        {
+            page.SelectedTabColor = color;
+            return page;
+        }
+
+        public static TabbedPage UnselectedTabColor(this TabbedPage page, Color color)
+        {
+            page.UnselectedTabColor = color;
+            return page;
+        }
     }
 }
