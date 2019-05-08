@@ -29,9 +29,22 @@ namespace Fluent
             return button;
         }
 
+        [Obsolete("Button.Image is obsolete: Image is obsolete as of 4.0.0. Please use ImageSource instead.")]
         public static Button Image(this Button button, FileImageSource image)
         {
             button.Image = image;
+            return button;
+        }
+
+        public static Button Image(this Button button, ImageSource image)
+        {
+            button.Image = image;
+            return button;
+        }
+
+        public static Button ImageSource(this Button button, ImageSource image)
+        {
+            button.ImageSource = image;
             return button;
         }
 

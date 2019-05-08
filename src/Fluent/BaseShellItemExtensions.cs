@@ -33,5 +33,17 @@ namespace Fluent
             shell.Title = title;
             return shell;
         }
+
+        public static T IsTabStop<T>(this T shell, bool isTabStop) where T : BaseShellItem
+        {
+            shell.IsTabStop = isTabStop;
+            return shell;
+        }
+
+        public static T TabIndex<T>(this T shell, int tabIndex) where T : BaseShellItem
+        {
+            shell.TabIndex = tabIndex;
+            return shell;
+        }
     }
 }

@@ -2,6 +2,8 @@
 
 namespace Fluent
 {
+    using System;
+
     public static class SliderExtensions
     {
         public static Slider MaxAndMin(this Slider slider, double max, double min = 0)
@@ -24,9 +26,16 @@ namespace Fluent
             return slider;
         }
 
+        [Obsolete("Slider.ThumbImage is obsolete: Image is obsolete as of 4.0.0. Please use ThumbImageSource instead.")]
         public static Slider ThumbImage(this Slider slider, FileImageSource source)
         {
             slider.ThumbImage = source;
+            return slider;
+        }
+
+        public static Slider ThumbImageSource(this Slider slider, ImageSource source)
+        {
+            slider.ThumbImageSource = source;
             return slider;
         }
     }

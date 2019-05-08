@@ -7,24 +7,37 @@ namespace Fluent
 {
     public static class PageExtensions
     {
+        [Obsolete("Page.BackgroundImage is obsolete: Image is obsolete as of 4.0.0. Please use BackgroundImageSource instead.")]
         public static Page BackgroundImage(this Page page, string source)
         {
             page.BackgroundImage = source;
             return page;
         }
-        
+
+        public static Page BackgroundImageSource(this Page page, ImageSource source)
+        {
+            page.BackgroundImageSource = source;
+            return page;
+        }
+
+        public static Page IconImageSource(this Page page, ImageSource source)
+        {
+            page.IconImageSource = source;
+            return page;
+        }
+
         public static Page Icon(this Page page, FileImageSource source)
         {
             page.Icon = source;
             return page;
         }
-        
+
         public static Page IsBusy(this Page page, bool isBusy)
         {
             page.IsBusy = isBusy;
             return page;
         }
-        
+
         public static Page Padding(this Page page, double uniformSize)
         {
             page.Padding = new Thickness(uniformSize);
@@ -48,19 +61,19 @@ namespace Fluent
             page.Title = title;
             return page;
         }
-        
+
         public static Page ToolbarItems(this Page page, Func<IList<ToolbarItem>> items)
         {
             items.Invoke().ForEach(x => page.ToolbarItems.Add(x));
             return page;
         }
-        
+
         public static Page ToolbarItems(this Page page, params ToolbarItem[] items)
         {
             items.ForEach(x => page.ToolbarItems.Add(x));
             return page;
         }
-        
+
         public static Page ToolbarItems(this Page page, Func<ToolbarItem> item)
         {
             page.ToolbarItems.Add(item.Invoke());

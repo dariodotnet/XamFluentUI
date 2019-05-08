@@ -57,9 +57,9 @@ namespace Fluent
             return shell;
         }
 
-        public static Shell GroupHeaderTemplate(this Shell shell, DataTemplate template)
+        public static Shell FlyoutIcon(this Shell shell, ImageSource source)
         {
-            shell.GroupHeaderTemplate = template;
+            shell.FlyoutIcon = source;
             return shell;
         }
 

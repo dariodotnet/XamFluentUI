@@ -34,5 +34,11 @@ namespace Fluent
             item.Text = text;
             return item;
         }
+
+        public static MenuItem IconImageSource(this MenuItem item, ImageSource icon)
+        {
+            item.IconImageSource = icon;
+            return item;
+        }
     }
 }
