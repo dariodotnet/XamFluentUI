@@ -36,11 +36,6 @@ namespace Fluent
             return button;
         }
 
-        public static Button Image(this Button button, ImageSource image)
-        {
-            button.Image = image;
-            return button;
-        }
 
         public static Button ImageSource(this Button button, ImageSource image)
         {

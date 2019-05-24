@@ -1,11 +1,15 @@
-﻿using System;
-using Xamarin.Forms;
-using Xamarin.Forms.Internals;
+﻿using Xamarin.Forms;
 
 namespace Fluent
 {
     public static class ShellExtensions
     {
+        public static Shell BackgroundColor(this Shell shell, Color color)
+        {
+            shell.BackgroundColor = color;
+            return shell;
+        }
+
         public static Shell CurrentItem(this Shell shell, ShellItem item)
         {
             shell.CurrentItem = item;
@@ -63,65 +67,15 @@ namespace Fluent
             return shell;
         }
 
-        public static Shell Items(this Shell shell, ShellItemCollection collection)
-        {
-            collection.ForEach(section => shell.Items.Add(section));
-            return shell;
-        }
-
-        public static Shell Items(this Shell shell, Func<ShellItemCollection> collection)
-        {
-            collection.Invoke().ForEach(section => shell.Items.Add(section));
-            return shell;
-        }
-
         public static Shell ItemTemplate(this Shell shell, DataTemplate template)
         {
             shell.ItemTemplate = template;
             return shell;
         }
 
-        public static Shell MenuItems(this Shell shell, MenuItemCollection collection)
-        {
-            collection.ForEach(item => shell.MenuItems.Add(item));
-            return shell;
-        }
-
-        public static Shell MenuItems(this Shell shell, Func<MenuItemCollection> collection)
-        {
-            collection.Invoke().ForEach(item => shell.MenuItems.Add(item));
-            return shell;
-        }
-
         public static Shell MenuItemTemplate(this Shell shell, DataTemplate template)
         {
             shell.MenuItemTemplate = template;
-            return shell;
-        }
-
-        public static Shell Route(this Shell shell, string route)
-        {
-            shell.Route = route;
-            return shell;
-        }
-
-        public static Shell Route(this Shell shell, string route, string host, string schema)
-        {
-            shell.Route = route;
-            shell.RouteHost = host;
-            shell.RouteScheme = schema;
-            return shell;
-        }
-
-        public static Shell RouteHost(this Shell shell, string host)
-        {
-            shell.RouteHost = host;
-            return shell;
-        }
-
-        public static Shell RouteScheme(this Shell shell, string scheme)
-        {
-            shell.RouteScheme = scheme;
             return shell;
         }
     }
