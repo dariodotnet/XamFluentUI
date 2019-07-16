@@ -15,5 +15,11 @@ namespace Fluent
             control.OnColor = color;
             return control;
         }
+
+        public static Switch ThumbColor(this Switch control, Color color)
+        {
+            control.ThumbColor = color;
+            return control;
+        }
     }
 }

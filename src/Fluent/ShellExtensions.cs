@@ -78,5 +78,17 @@ namespace Fluent
             shell.MenuItemTemplate = template;
             return shell;
         }
+
+        public static Shell FlyoutBackgroundImageAspect(this Shell shell, Aspect aspect)
+        {
+            shell.FlyoutBackgroundImageAspect = aspect;
+            return shell;
+        }
+
+        public static Shell FlyoutBackgroundImage(this Shell shell, ImageSource source)
+        {
+            shell.FlyoutBackgroundImage = source;
+            return shell;
+        }
     }
 }
