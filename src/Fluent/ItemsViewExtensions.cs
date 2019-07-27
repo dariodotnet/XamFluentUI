@@ -58,5 +58,37 @@ namespace Fluent
             cells.ItemTemplate = template;
             return cells;
         }
+
+        public static ItemsView HorizontalScrollBarVisibility(this ItemsView items, ScrollBarVisibility visibility)
+        {
+            items.HorizontalScrollBarVisibility = visibility;
+            return items;
+        }
+
+        public static ItemsView VerticalScrollBarVisibility(this ItemsView items, ScrollBarVisibility visibility)
+        {
+            items.VerticalScrollBarVisibility = visibility;
+            return items;
+        }
+
+        public static ItemsView ScrollBarVisibility(this ItemsView items, ScrollBarVisibility visibility)
+        {
+            items.HorizontalScrollBarVisibility = visibility;
+            items.VerticalScrollBarVisibility = visibility;
+            return items;
+        }
+
+        public static ItemsView ScrollBarVisibility(this ItemsView items, ScrollBarVisibility horizontalVisibility, ScrollBarVisibility verticalVisibility)
+        {
+            items.HorizontalScrollBarVisibility = horizontalVisibility;
+            items.VerticalScrollBarVisibility = verticalVisibility;
+            return items;
+        }
+
+        public static ItemsView ItemsUpdatingScrollMode(this ItemsView items, ItemsUpdatingScrollMode mode)
+        {
+            items.ItemsUpdatingScrollMode = mode;
+            return items;
+        }
     }
 }
