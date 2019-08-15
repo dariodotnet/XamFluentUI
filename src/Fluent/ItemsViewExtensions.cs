@@ -1,4 +1,5 @@
 ﻿using System.Collections;
+using System.Windows.Input;
 using Xamarin.Forms;
 
 namespace Fluent
@@ -88,6 +89,64 @@ namespace Fluent
         public static ItemsView ItemsUpdatingScrollMode(this ItemsView items, ItemsUpdatingScrollMode mode)
         {
             items.ItemsUpdatingScrollMode = mode;
+            return items;
+        }
+        
+        public static ItemsView FooterTemplate(this ItemsView items, DataTemplate template)
+        {
+            items.FooterTemplate = template;
+            return items;
+        }
+        
+        public static ItemsView Footer(this ItemsView items, object footer)
+        {
+            items.Footer = footer;
+            return items;
+        }
+        
+        public static ItemsView Footer(this ItemsView items, object footer, DataTemplate template)
+        {
+            items.Footer = footer;
+            items.FooterTemplate = template;
+            return items;
+        }
+        
+        public static ItemsView HeaderTemplate(this ItemsView items, DataTemplate template)
+        {
+            items.HeaderTemplate = template;
+            return items;
+        }
+        
+        public static ItemsView Header(this ItemsView items, object header)
+        {
+            items.Header = header;
+            return items;
+        }
+        
+        public static ItemsView Header(this ItemsView items, object header, DataTemplate template)
+        {
+            items.Header = header;
+            items.HeaderTemplate = template;
+            return items;
+        }
+        
+        public static ItemsView HeaderAndFooter(this ItemsView items, DataTemplate header, DataTemplate footer)
+        {
+            items.HeaderTemplate = header;
+            items.FooterTemplate = footer;
+            return items;
+        }
+        
+        public static ItemsView RemainingItemsThreshold(this ItemsView items, int total)
+        {
+            items.RemainingItemsThreshold = total;
+            return items;
+        }
+        
+        public static ItemsView RemainingItemsThresholdReachedCommand(this ItemsView items, ICommand command, object commandParameter = null)
+        {
+            items.RemainingItemsThresholdReachedCommand = command;
+            items.RemainingItemsThresholdReachedCommandParameter = commandParameter;
             return items;
         }
     }
