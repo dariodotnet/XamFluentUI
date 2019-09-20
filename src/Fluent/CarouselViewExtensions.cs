@@ -60,5 +60,11 @@ namespace Fluent
             carousel.Position = position;
             return carousel;
         }
+
+        public static CarouselView ItemsLayout(this CarouselView carousel, LinearItemsLayout layout)
+        {
+            carousel.ItemsLayout = layout;
+            return carousel;
+        }
     }
 }
