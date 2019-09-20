@@ -50,6 +50,12 @@ namespace Fluent
             return datePicker;
         }
 
+        public static DatePicker CharacterSpacing(this DatePicker datePicker, double spacing)
+        {
+            datePicker.CharacterSpacing = spacing;
+            return datePicker;
+        }
+
         #endregion
     }
 }

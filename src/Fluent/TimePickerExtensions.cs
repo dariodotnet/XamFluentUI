@@ -43,6 +43,12 @@ namespace Fluent
             return timePicker;
         }
 
+        public static TimePicker CharacterSpacing(this TimePicker timePicker, double spacing)
+        {
+            timePicker.CharacterSpacing = spacing;
+            return timePicker;
+        }
+
         #endregion
     }
 }

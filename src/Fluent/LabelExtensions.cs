@@ -75,6 +75,24 @@ namespace Fluent
             return label;
         }
 
+        public static Label CharacterSpacing(this Label label, double spacing)
+        {
+            label.CharacterSpacing = spacing;
+            return label;
+        }
+
+        public static Label Padding(this Label label, Thickness padding)
+        {
+            label.Padding = padding;
+            return label;
+        }
+
+        public static Label TextType(this Label label, TextType textType)
+        {
+            label.TextType = textType;
+            return label;
+        }
+
         #endregion
     }
 }

@@ -61,6 +61,12 @@ namespace Fluent
             return span;
         }
 
+        public static Span CharacterSpacing(this Span span, double spacing)
+        {
+            span.CharacterSpacing = spacing;
+            return span;
+        }
+
         #endregion
     }
 }

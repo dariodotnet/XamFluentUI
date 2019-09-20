@@ -53,5 +53,11 @@ namespace Fluent
             editor.PlaceholderColor = color;
             return editor;
         }
+
+        public static Editor CharacterSpacing(this Editor editor, double spacing)
+        {
+            editor.CharacterSpacing = spacing;
+            return editor;
+        }
     }
 }

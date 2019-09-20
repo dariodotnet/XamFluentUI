@@ -10,6 +10,12 @@ namespace Fluent
             return cell;
         }
 
+        public static EntryCell VerticalTextAlignment(this EntryCell cell, TextAlignment alignment)
+        {
+            cell.VerticalTextAlignment = alignment;
+            return cell;
+        }
+
         public static EntryCell Keyboard(this EntryCell cell, Keyboard keyboard)
         {
             cell.Keyboard = keyboard;

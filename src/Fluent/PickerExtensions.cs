@@ -49,6 +49,12 @@ namespace Fluent
             return picker;
         }
 
+        public static Picker CharacterSpacing(this Picker picker, double spacing)
+        {
+            picker.CharacterSpacing = spacing;
+            return picker;
+        }
+
         #endregion
     }
 }

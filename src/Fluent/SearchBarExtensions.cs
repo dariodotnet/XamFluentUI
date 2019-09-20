@@ -69,6 +69,19 @@ namespace Fluent
             return searchBar;
         }
 
+        public static SearchBar VerticalTextAlignment(this SearchBar searchBar, TextAlignment alignment)
+        {
+            searchBar.VerticalTextAlignment = alignment;
+            return searchBar;
+        }
+
+        public static SearchBar TextAlignment(this SearchBar searchBar, TextAlignment horizontalAlignment, TextAlignment verticalAlignment)
+        {
+            searchBar.HorizontalTextAlignment = horizontalAlignment;
+            searchBar.VerticalTextAlignment = verticalAlignment;
+            return searchBar;
+        }
+
         public static SearchBar Text(this SearchBar searchBar, string text)
         {
             searchBar.Text = text;
@@ -79,6 +92,12 @@ namespace Fluent
         {
             searchBar.Text = text;
             searchBar.TextColor = textColor;
+            return searchBar;
+        }
+
+        public static SearchBar CharacterSpacing(this SearchBar searchBar, double spacing)
+        {
+            searchBar.CharacterSpacing = spacing;
             return searchBar;
         }
 

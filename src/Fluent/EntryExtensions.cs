@@ -115,5 +115,23 @@ namespace Fluent
             entry.TextColor = textColor;
             return entry;
         }
+
+        public static Entry CharacterSpacing(this Entry entry, double spacing)
+        {
+            entry.CharacterSpacing = spacing;
+            return entry;
+        }
+
+        public static Entry ClearButtonVisibility(this Entry entry, ClearButtonVisibility visibility)
+        {
+            entry.ClearButtonVisibility = visibility;
+            return entry;
+        }
+
+        public static Entry VerticalTextAlignment(this Entry entry, TextAlignment alignment)
+        {
+            entry.VerticalTextAlignment = alignment;
+            return entry;
+        }
     }
 }

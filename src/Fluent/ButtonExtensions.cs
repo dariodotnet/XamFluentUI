@@ -82,6 +82,12 @@ namespace Fluent
             return button;
         }
 
+        public static Button CharacterSpacing(this Button button, double spacing)
+        {
+            button.CharacterSpacing = spacing;
+            return button;
+        }
+
         #endregion
 
         public static Button ClickedEvent(this Button button, Action<object> action, object parameter)
