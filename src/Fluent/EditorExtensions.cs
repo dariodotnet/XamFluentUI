@@ -27,37 +27,5 @@ namespace Fluent
             editor.FontSize = size;
             return editor;
         }
-
-        public static Editor Text(this Editor editor, string text)
-        {
-            editor.Text = text;
-            return editor;
-        }
-
-        public static Editor Text(this Editor editor, string text, Color color = default(Color))
-        {
-            editor.Text = text;
-            editor.TextColor = color;
-            return editor;
-        }
-
-        public static Editor Placeholder(this Editor editor, string placeholder)
-        {
-            editor.Placeholder = placeholder;
-            return editor;
-        }
-
-        public static Editor Placeholder(this Editor editor, string placeholder, Color color = default(Color))
-        {
-            editor.Placeholder = placeholder;
-            editor.PlaceholderColor = color;
-            return editor;
-        }
-
-        public static Editor CharacterSpacing(this Editor editor, double spacing)
-        {
-            editor.CharacterSpacing = spacing;
-            return editor;
-        }
     }
 }

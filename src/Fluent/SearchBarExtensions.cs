@@ -11,19 +11,6 @@ namespace Fluent
             return searchBar;
         }
 
-        public static SearchBar Placeholder(this SearchBar searchBar, string placeholder)
-        {
-            searchBar.Placeholder = placeholder;
-            return searchBar;
-        }
-
-        public static SearchBar Placeholder(this SearchBar searchBar, string placeholder, Color textColor = default(Color))
-        {
-            searchBar.Placeholder = placeholder;
-            searchBar.PlaceholderColor = textColor;
-            return searchBar;
-        }
-
         public static SearchBar SearchCommand(this SearchBar searchBar, ICommand command)
         {
             searchBar.SearchCommand = command;
@@ -79,25 +66,6 @@ namespace Fluent
         {
             searchBar.HorizontalTextAlignment = horizontalAlignment;
             searchBar.VerticalTextAlignment = verticalAlignment;
-            return searchBar;
-        }
-
-        public static SearchBar Text(this SearchBar searchBar, string text)
-        {
-            searchBar.Text = text;
-            return searchBar;
-        }
-
-        public static SearchBar Text(this SearchBar searchBar, string text, Color textColor = default(Color))
-        {
-            searchBar.Text = text;
-            searchBar.TextColor = textColor;
-            return searchBar;
-        }
-
-        public static SearchBar CharacterSpacing(this SearchBar searchBar, double spacing)
-        {
-            searchBar.CharacterSpacing = spacing;
             return searchBar;
         }
 

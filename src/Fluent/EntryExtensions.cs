@@ -47,25 +47,6 @@ namespace Fluent
             return entry;
         }
 
-        public static Entry Placeholder(this Entry entry, string placeholder)
-        {
-            entry.Placeholder = placeholder;
-            return entry;
-        }
-
-        public static Entry Placeholder(this Entry entry, string placeholder, Color textColor = default(Color))
-        {
-            entry.Placeholder = placeholder;
-            entry.PlaceholderColor = textColor;
-            return entry;
-        }
-
-        public static Entry PlaceholderColor(this Entry entry, Color color)
-        {
-            entry.PlaceholderColor = color;
-            return entry;
-        }
-
         public static Entry ReturnCommand(this Entry entry, ICommand command)
         {
             entry.ReturnCommand = command;
@@ -94,31 +75,6 @@ namespace Fluent
         public static Entry SelectionLength(this Entry entry, int length)
         {
             entry.SelectionLength = length;
-            return entry;
-        }
-
-        public static Entry Text(this Entry entry, string text)
-        {
-            entry.Text = text;
-            return entry;
-        }
-
-        public static Entry Text(this Entry entry, string text, Color color)
-        {
-            entry.Text = text;
-            entry.TextColor = color;
-            return entry;
-        }
-
-        public static Entry TextColor(this Entry entry, Color textColor)
-        {
-            entry.TextColor = textColor;
-            return entry;
-        }
-
-        public static Entry CharacterSpacing(this Entry entry, double spacing)
-        {
-            entry.CharacterSpacing = spacing;
             return entry;
         }
 
