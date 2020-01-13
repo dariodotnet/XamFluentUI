@@ -36,12 +36,6 @@ namespace Fluent
             return carousel;
         }
 
-        public static CarouselView NumberOfSideItems(this CarouselView carousel, int total)
-        {
-            carousel.NumberOfSideItems = total;
-            return carousel;
-        }
-
         public static CarouselView PeekAreaInsets(this CarouselView carousel, Thickness area)
         {
             carousel.PeekAreaInsets = area;
