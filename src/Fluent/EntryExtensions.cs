@@ -72,6 +72,14 @@ namespace Fluent
             return entry;
         }
 
+        public static Entry Return(this Entry entry, ReturnType returnType, ICommand command, object paramenter)
+        {
+            entry.ReturnType = returnType;
+            entry.ReturnCommand = command;
+            entry.ReturnCommandParameter = paramenter;
+            return entry;
+        }
+
         public static Entry SelectionLength(this Entry entry, int length)
         {
             entry.SelectionLength = length;
@@ -87,6 +95,13 @@ namespace Fluent
         public static Entry VerticalTextAlignment(this Entry entry, TextAlignment alignment)
         {
             entry.VerticalTextAlignment = alignment;
+            return entry;
+        }
+
+        public static Entry TextAlignment(this Entry entry, TextAlignment horizontal, TextAlignment vertical)
+        {
+            entry.HorizontalTextAlignment = horizontal;
+            entry.VerticalTextAlignment = vertical;
             return entry;
         }
     }

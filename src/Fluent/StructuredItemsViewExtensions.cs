@@ -47,5 +47,11 @@
             items.ItemsLayout = layout;
             return items;
         }
+        
+        public static StructuredItemsView ItemSizingStrategy(this StructuredItemsView items, ItemSizingStrategy strategy)
+        {
+            items.ItemSizingStrategy = strategy;
+            return items;
+        }
     }
 }

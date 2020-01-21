@@ -7,7 +7,7 @@ namespace Fluent
 {
     public static class PageExtensions
     {
-        [Obsolete("Page.BackgroundImage is obsolete: Image is obsolete as of 4.0.0. Please use BackgroundImageSource instead.")]
+        [Obsolete]
         public static Page BackgroundImage(this Page page, string source)
         {
             page.BackgroundImage = source;
@@ -26,6 +26,7 @@ namespace Fluent
             return page;
         }
 
+        [Obsolete]
         public static Page Icon(this Page page, FileImageSource source)
         {
             page.Icon = source;

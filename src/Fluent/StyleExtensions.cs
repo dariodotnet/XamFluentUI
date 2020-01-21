@@ -4,6 +4,8 @@ using Xamarin.Forms.Internals;
 
 namespace Fluent
 {
+    using System;
+
     public static class StyleExtensions
     {
         public static Style ApplyToDerivedTypes(this Style style, bool apply)
@@ -33,6 +35,24 @@ namespace Fluent
             return style;
         }
 
+        public static Style Behaviors(this Style style, Func<IList<Behavior>> behaviors)
+        {
+            if (behaviors is null)
+                return style;
+
+            behaviors.Invoke().ForEach(b => style.Behaviors.Add(b));
+            return style;
+        }
+
+        public static Style Behaviors(this Style style, params Behavior[] behaviors)
+        {
+            if (behaviors is null)
+                return style;
+
+            behaviors.ForEach(b => style.Behaviors.Add(b));
+            return style;
+        }
+
         public static Style CanCascade(this Style style, bool canCascade)
         {
             style.CanCascade = canCascade;
@@ -54,7 +74,43 @@ namespace Fluent
             return style;
         }
 
+        public static Style Setters(this Style style, Func<IList<Setter>> setters)
+        {
+            if (setters is null)
+                return style;
+
+            setters.Invoke().ForEach(s => style.Setters.Add(s));
+            return style;
+        }
+
+        public static Style Setters(this Style style, params Setter[] setters)
+        {
+            if (setters is null)
+                return style;
+
+            setters.ForEach(s => style.Setters.Add(s));
+            return style;
+        }
+
         public static Style Triggers(this Style style, IList<Trigger> triggers)
+        {
+            if (triggers is null)
+                return style;
+
+            triggers.ForEach(t => style.Triggers.Add(t));
+            return style;
+        }
+
+        public static Style Triggers(this Style style, Func<IList<Trigger>> triggers)
+        {
+            if (triggers is null)
+                return style;
+
+            triggers.Invoke().ForEach(t => style.Triggers.Add(t));
+            return style;
+        }
+
+        public static Style Triggers(this Style style, params Trigger[] triggers)
         {
             if (triggers is null)
                 return style;

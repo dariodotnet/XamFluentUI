@@ -16,6 +16,13 @@ namespace Fluent
             return cell;
         }
 
+        public static EntryCell TextAlignment(this EntryCell cell, TextAlignment horizontal, TextAlignment vertical)
+        {
+            cell.HorizontalTextAlignment = horizontal;
+            cell.VerticalTextAlignment = vertical;
+            return cell;
+        }
+
         public static EntryCell Keyboard(this EntryCell cell, Keyboard keyboard)
         {
             cell.Keyboard = keyboard;

@@ -4,6 +4,8 @@ using Xamarin.Forms.Internals;
 
 namespace Fluent
 {
+    using System.Collections.Generic;
+
     public static class GridExtensions
     {
         public static Grid RowsAndColumns(this Grid grid, int rows = 1, int columns = 1)
@@ -14,6 +16,13 @@ namespace Fluent
             if (columns > 1)
                 grid = AddColumns(grid, columns);
 
+            return grid;
+        }
+
+        public static Grid RowsAndColumns(this Grid grid, Func<IList<Tuple<int, GridLength>>> columns, Func<IList<Tuple<int, GridLength>>> rows)
+        {
+            columns.Invoke().ForEach(x => ConfigureColumns(grid, x));
+            rows.Invoke().ForEach(x => ConfigureRows(grid, x));
             return grid;
         }
 
