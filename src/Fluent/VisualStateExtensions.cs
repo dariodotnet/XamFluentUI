@@ -25,6 +25,12 @@ namespace Fluent
             return visual;
         }
 
+        public static VisualState Setters(this VisualState visual, params Setter[] setters)
+        {
+            setters.ForEach(s => visual.Setters.Add(s));
+            return visual;
+        }
+
         public static VisualState TargetType(this VisualState visual, Type type)
         {
             visual.TargetType = type;

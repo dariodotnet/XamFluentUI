@@ -19,10 +19,19 @@ namespace Fluent
             return element;
         }
 
+        public static T Effects<T>(this T element, IList<Effect> effects) where T : Element
+        {
+            if (effects is null)
+                throw new ArgumentNullException();
+
+            effects.ForEach(e => element.Effects.Add(e));
+            return element;
+        }
+
         public static T Effects<T>(this T element, Func<IList<Effect>> effects) where T : Element
         {
             if (effects is null)
-                return element;
+                throw new ArgumentNullException();
 
             effects.Invoke().ForEach(x => AddEffect(element, x));
             return element;
@@ -31,7 +40,7 @@ namespace Fluent
         public static T Effects<T>(this T element, params Effect[] effects) where T : Element
         {
             if (effects is null)
-                return element;
+                throw new ArgumentNullException();
 
             effects.ForEach(x => AddEffect(element, x));
             return element;

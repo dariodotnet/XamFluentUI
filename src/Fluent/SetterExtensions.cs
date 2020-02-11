@@ -17,6 +17,13 @@ namespace Fluent
             return setter;
         }
 
+        public static Setter Property(this Setter setter, (BindableProperty property, object value) prop)
+        {
+            setter.Property = prop.property;
+            setter.Value = prop.value;
+            return setter;
+        }
+
         public static Setter Value(this Setter setter, object value)
         {
             setter.Value = value;

@@ -20,6 +20,12 @@ namespace Fluent
             return visual;
         }
 
+        public static T Behaviors<T>(this T visual, IList<Behavior> behaviors) where T : VisualElement
+        {
+            behaviors.ForEach(x => visual.Behaviors.Add(x));
+            return visual;
+        }
+
         public static T Behaviors<T>(this T visual, Func<IList<Behavior>> behaviors) where T : VisualElement
         {
             behaviors.Invoke().ForEach(x => visual.Behaviors.Add(x));
@@ -152,6 +158,12 @@ namespace Fluent
         {
             visual.TranslationX = translateX;
             visual.TranslationY = translateY;
+            return visual;
+        }
+
+        public static T Triggers<T>(this T visual, IList<TriggerBase> triggers) where T : VisualElement
+        {
+            triggers.ForEach(x => visual.Triggers.Add(x));
             return visual;
         }
 

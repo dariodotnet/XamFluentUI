@@ -16,6 +16,13 @@ namespace Fluent
             return items;
         }
 
+        public static GroupableItemsView GroupHeaderAndFooterTemplate(this GroupableItemsView items, DataTemplate headerTemplate, DataTemplate footerTemplate)
+        {
+            items.GroupHeaderTemplate = headerTemplate;
+            items.FooterTemplate = footerTemplate;
+            return items;
+        }
+
         public static GroupableItemsView IsGrouped(this GroupableItemsView items, bool isGrouped)
         {
             items.IsGrouped = isGrouped;

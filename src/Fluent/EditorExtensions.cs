@@ -16,9 +16,9 @@ namespace Fluent
             return editor;
         }
 
-        public static Editor FontFamily(this Editor editor, string fontFamilty)
+        public static Editor FontFamily(this Editor editor, string fontFamily)
         {
-            editor.FontFamily = fontFamilty;
+            editor.FontFamily = fontFamily;
             return editor;
         }
 

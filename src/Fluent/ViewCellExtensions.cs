@@ -10,5 +10,11 @@ namespace Fluent
             viewCell.View = view.Invoke();
             return viewCell;
         }
+
+        public static ViewCell View(this ViewCell viewCell, View view)
+        {
+            viewCell.View = view;
+            return viewCell;
+        }
     }
 }

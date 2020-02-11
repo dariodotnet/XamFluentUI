@@ -26,6 +26,13 @@ namespace Fluent
             return grid;
         }
 
+        public static Grid RowsAndColumns(this Grid grid, Func<(int total, GridLength gridLenght)[]> columns, Func<(int total, GridLength gridLength)[]> rows)
+        {
+            columns.Invoke().ForEach(config => ConfigureColumns(grid, config));
+            rows.Invoke().ForEach(x => ConfigureRows(grid, x));
+            return grid;
+        }
+
         public static Grid AddRows(this Grid grid, int rows = 0)
         {
             if (rows < 1)
@@ -60,6 +67,12 @@ namespace Fluent
             return grid;
         }
 
+        public static Grid ConfigureColumns(this Grid grid, params (int columNumber, GridLength gridLength)[] values)
+        {
+            values.ForEach(x => grid.ColumnDefinitions[x.columNumber].Width = x.gridLength);
+            return grid;
+        }
+
         public static Grid ConfigureRow(this Grid grid, int row, GridLength length)
         {
             grid.RowDefinitions[row].Height = length;
@@ -69,6 +82,12 @@ namespace Fluent
         public static Grid ConfigureRows(this Grid grid, params Tuple<int, GridLength>[] values)
         {
             values.ForEach(x => grid.RowDefinitions[x.Item1].Height = x.Item2);
+            return grid;
+        }
+
+        public static Grid ConfigureRows(this Grid grid, params (int rowNumber, GridLength gridLength)[] values)
+        {
+            values.ForEach(x => grid.RowDefinitions[x.rowNumber].Height = x.gridLength);
             return grid;
         }
 

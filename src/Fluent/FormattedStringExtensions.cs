@@ -12,5 +12,17 @@ namespace Fluent
             spans.Invoke().ForEach(x => formattedString.Spans.Add(x));
             return formattedString;
         }
+
+        public static FormattedString Spans(this FormattedString formattedString, IEnumerable<Span> spans)
+        {
+            spans.ForEach(x => formattedString.Spans.Add(x));
+            return formattedString;
+        }
+
+        public static FormattedString Spans(this FormattedString formattedString, params Span[] spans)
+        {
+            spans.ForEach(x => formattedString.Spans.Add(x));
+            return formattedString;
+        }
     }
 }

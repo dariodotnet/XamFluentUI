@@ -7,7 +7,19 @@ namespace Fluent
     {
         public static ScrollView Content(this ScrollView scrollView, Func<View> view)
         {
+            if (view is null)
+                throw new ArgumentNullException();
+
             scrollView.Content = view.Invoke();
+            return scrollView;
+        }
+
+        public static ScrollView Content(this ScrollView scrollView, View view)
+        {
+            if (view is null)
+                throw new ArgumentNullException();
+
+            scrollView.Content = view;
             return scrollView;
         }
 

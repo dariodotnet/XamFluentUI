@@ -25,6 +25,12 @@ namespace Fluent
             return visual;
         }
 
+        public static VisualStateGroup States(this VisualStateGroup visual, params VisualState[] states)
+        {
+            states.ForEach(state => visual.States.Add(state));
+            return visual;
+        }
+
         public static VisualStateGroup TargetType(this VisualStateGroup visual, Type type)
         {
             visual.TargetType = type;
