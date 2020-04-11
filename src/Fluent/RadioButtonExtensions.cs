@@ -4,9 +4,9 @@
 
     public static class RadioButtonExtensions
     {
-        public static RadioButton ButtonSource(this RadioButton button, ImageSource source)
+        public static RadioButton ImageSource(this RadioButton button, ImageSource source)
         {
-            button.ButtonSource = source;
+            button.ImageSource = source;
             return button;
         }
 
@@ -18,7 +18,7 @@
 
         public static RadioButton Config(this RadioButton button, ImageSource source, string group)
         {
-            button.ButtonSource = source;
+            button.ImageSource = source;
             button.GroupName = group;
             return button;
         }
