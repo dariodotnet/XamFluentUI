@@ -80,7 +80,7 @@
 
         public static Expander Spacing(this Expander expander, double spacing)
         {
-            expander.Spacing = spacing;
+            expander.Spacing(spacing);
             return expander;
         }
 
