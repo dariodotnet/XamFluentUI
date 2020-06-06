@@ -67,6 +67,12 @@ namespace Fluent
             return shell;
         }
 
+        public static Shell FlyoutBackdropColor(this Shell shell, Color color)
+        {
+            shell.FlyoutBackdropColor = color;
+            return shell;
+        }
+
         public static Shell ItemTemplate(this Shell shell, DataTemplate template)
         {
             shell.ItemTemplate = template;
