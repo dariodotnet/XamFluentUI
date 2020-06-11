@@ -5,6 +5,8 @@ using Xamarin.Forms.Internals;
 
 namespace Fluent
 {
+    using Xamarin.Forms.Shapes;
+
     public static class VisualElementExtensions
     {
         public static T Anchor<T>(this T visual, double anchorX, double anchorY) where T : VisualElement
@@ -176,6 +178,12 @@ namespace Fluent
         public static T Triggers<T>(this T visual, params TriggerBase[] triggers) where T : VisualElement
         {
             triggers.ForEach(x => visual.Triggers.Add(x));
+            return visual;
+        }
+
+        public static T Clip<T>(this T visual, Geometry geometry) where T : VisualElement
+        {
+            visual.Clip = geometry;
             return visual;
         }
     }
