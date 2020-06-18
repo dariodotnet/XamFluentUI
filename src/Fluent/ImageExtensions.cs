@@ -28,25 +28,26 @@ namespace Fluent
             return image;
         }
 
-        public static Image Source(this Image image, ImageSource source, ImageSource loading, ImageSource error)
-        {
-            image.Source = source;
-            image.LoadingPlaceholder = loading;
-            image.ErrorPlaceholder = error;
-            return image;
-        }
+        //TODO uncomment when properties are available again
+        //public static Image Source(this Image image, ImageSource source, ImageSource loading, ImageSource error)
+        //{
+        //    image.Source = source;
+        //    image.LoadingPlaceholder = loading;
+        //    image.ErrorPlaceholder = error;
+        //    return image;
+        //}
 
-        public static Image LoadingPlaceholder(this Image image, ImageSource loading)
-        {
-            image.LoadingPlaceholder = loading;
-            return image;
-        }
+        //public static Image LoadingPlaceholder(this Image image, ImageSource loading)
+        //{
+        //    image.LoadingPlaceholder = loading;
+        //    return image;
+        //}
 
-        public static Image ErrorPlaceholder(this Image image, ImageSource error)
-        {
-            image.ErrorPlaceholder = error;
-            return image;
-        }
+        //public static Image ErrorPlaceholder(this Image image, ImageSource error)
+        //{
+        //    image.ErrorPlaceholder = error;
+        //    return image;
+        //}
 
         public static Image Configure(this Image image,
             ImageSource source,
