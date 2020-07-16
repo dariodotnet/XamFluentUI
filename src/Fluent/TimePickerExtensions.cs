@@ -49,6 +49,12 @@ namespace Fluent
             return timePicker;
         }
 
+        public static TimePicker TextTransform(this TimePicker timePicker, TextTransform transform)
+        {
+            timePicker.TextTransform = transform;
+            return timePicker;
+        }
+
         #endregion
     }
 }

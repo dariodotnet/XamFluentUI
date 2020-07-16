@@ -88,6 +88,12 @@ namespace Fluent
             return button;
         }
 
+        public static Button TextTransform(this Button button, TextTransform transform)
+        {
+            button.TextTransform = transform;
+            return button;
+        }
+
         #endregion
 
         public static Button ClickedEvent(this Button button, Action<object> action, object parameter)

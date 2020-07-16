@@ -45,5 +45,11 @@ namespace Fluent
             shell.TabIndex = tabIndex;
             return shell;
         }
+
+        public static T IsVisible<T>(this T shell, bool isVisible) where T : BaseShellItem
+        {
+            shell.IsVisible = isVisible;
+            return shell;
+        }
     }
 }

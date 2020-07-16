@@ -56,6 +56,12 @@ namespace Fluent
             return datePicker;
         }
 
+        public static DatePicker TextTransform(this DatePicker datePicker, TextTransform transform)
+        {
+            datePicker.TextTransform = transform;
+            return datePicker;
+        }
+
         #endregion
     }
 }

@@ -55,6 +55,34 @@ namespace Fluent
             return picker;
         }
 
+        public static Picker HorizontalTextAlignment(this Picker picker, TextAlignment alignment)
+        {
+            picker.HorizontalTextAlignment = alignment;
+            return picker;
+        }
+
+        public static Picker VerticalTextAlignment(this Picker picker, TextAlignment alignment)
+        {
+            picker.VerticalTextAlignment = alignment;
+            return picker;
+        }
+
+        public static Picker TextAlignment(this Picker picker, TextAlignment horizontalAlignment, TextAlignment verticalAlignment)
+        {
+            return picker.HorizontalTextAlignment(horizontalAlignment).VerticalTextAlignment(verticalAlignment);
+        }
+
+        public static Picker TextAlignment(this Picker picker, (TextAlignment, TextAlignment) alignment)
+        {
+            return picker.TextAlignment(alignment.Item1, alignment.Item2);
+        }
+
+        public static Picker TextTransform(this Picker picker, TextTransform transform)
+        {
+            picker.TextTransform = transform;
+            return picker;
+        }
+
         #endregion
     }
 }

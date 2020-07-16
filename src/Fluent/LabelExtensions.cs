@@ -93,6 +93,12 @@ namespace Fluent
             return label;
         }
 
+        public static Label TextTransform(this Label label, TextTransform transform)
+        {
+            label.TextTransform = transform;
+            return label;
+        }
+
         #endregion
     }
 }

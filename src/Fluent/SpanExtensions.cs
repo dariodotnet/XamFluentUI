@@ -67,6 +67,12 @@ namespace Fluent
             return span;
         }
 
+        public static Span TextTransform(this Span span, TextTransform transform)
+        {
+            span.TextTransform = transform;
+            return span;
+        }
+
         #endregion
     }
 }

@@ -57,5 +57,11 @@
             search.TextColor = color;
             return search;
         }
+
+        public static SearchHandler TextTransform(this SearchHandler search, TextTransform transform)
+        {
+            search.TextTransform = transform;
+            return search;
+        }
     }
 }
