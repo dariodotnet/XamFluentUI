@@ -15,5 +15,11 @@ namespace Fluent
             page.BarTextColor = color;
             return page;
         }
+
+        public static NavigationPage BarBackground(this NavigationPage page, Brush color)
+        {
+            page.BarBackground = color;
+            return page;
+        }
     }
 }

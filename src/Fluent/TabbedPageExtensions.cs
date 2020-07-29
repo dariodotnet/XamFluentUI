@@ -27,5 +27,11 @@ namespace Fluent
             page.UnselectedTabColor = color;
             return page;
         }
+
+        public static TabbedPage Background(this TabbedPage page, Brush brush)
+        {
+            page.Background = brush;
+            return page;
+        }
     }
 }

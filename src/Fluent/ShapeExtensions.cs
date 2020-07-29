@@ -11,13 +11,13 @@
             return shape;
         }
 
-        public static T Fill<T>(this T shape, Color fill) where T : Shape
+        public static T Fill<T>(this T shape, Brush fill) where T : Shape
         {
             shape.Fill = fill;
             return shape;
         }
 
-        public static T Stroke<T>(this T shape, Color stroke) where T : Shape
+        public static T Stroke<T>(this T shape, Brush stroke) where T : Shape
         {
             shape.Stroke = stroke;
             return shape;
@@ -53,7 +53,7 @@
             return shape;
         }
 
-        public static T Shape<T>(this T shape, Stretch aspect, Color fill, Color stroke,
+        public static T Shape<T>(this T shape, Stretch aspect, Brush fill, Brush stroke,
             DoubleCollection doubleCollection, double offSet,
             PenLineCap penLineCap, PenLineJoin penLineJoin, double strokeThickness) where T : Shape
         {

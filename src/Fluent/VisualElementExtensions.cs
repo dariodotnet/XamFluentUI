@@ -186,5 +186,11 @@ namespace Fluent
             visual.Clip = geometry;
             return visual;
         }
+
+        public static T Background<T>(this T visual, Brush brush) where T : VisualElement
+        {
+            visual.Background = brush;
+            return visual;
+        }
     }
 }
