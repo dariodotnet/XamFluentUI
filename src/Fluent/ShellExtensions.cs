@@ -96,5 +96,11 @@ namespace Fluent
             shell.FlyoutBackground = brush;
             return shell;
         }
+
+        public static Shell FlyoutBackdrop(this Shell shell, Brush brush)
+        {
+            shell.FlyoutBackdrop = brush;
+            return shell;
+        }
     }
 }
