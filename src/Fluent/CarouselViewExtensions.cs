@@ -60,5 +60,11 @@ namespace Fluent
             carousel.ItemsLayout = layout;
             return carousel;
         }
+
+        public static CarouselView Loop(this CarouselView carousel, bool loop)
+        {
+            carousel.Loop = loop;
+            return carousel;
+        }
     }
 }

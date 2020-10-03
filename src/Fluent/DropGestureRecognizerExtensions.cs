@@ -28,6 +28,23 @@
             return drop.DragOverCommand(command).DragOverCommandParameter(parameter);
         }
 
+        public static DropGestureRecognizer DragLeaveCommand(this DropGestureRecognizer drop, ICommand command)
+        {
+            drop.DragLeaveCommand = command;
+            return drop;
+        }
+
+        public static DropGestureRecognizer DragLeaveCommandParameter(this DropGestureRecognizer drop, object parameter)
+        {
+            drop.DragLeaveCommandParameter = parameter;
+            return drop;
+        }
+
+        public static DropGestureRecognizer DragLeaveCommand(this DropGestureRecognizer drop, ICommand command, object parameter)
+        {
+            return drop.DragLeaveCommand(command).DragLeaveCommandParameter(parameter);
+        }
+
         public static DropGestureRecognizer DropCommand(this DropGestureRecognizer drop, ICommand command)
         {
             drop.DropCommand = command;
