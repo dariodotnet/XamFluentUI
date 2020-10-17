@@ -5,7 +5,7 @@
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <Authors>Dario Alonso</Authors>
     <Description>Fluent API UI to Xamarin Forms</Description>
-    <Version>5.0.0.1487-pre1</Version>
+    <Version>5.0.0.1558-pre3</Version>
     <PackageProjectUrl>https://github.com/dariodotnet/XamFluentUI</PackageProjectUrl>
     <RepositoryUrl>https://github.com/dariodotnet/XamFluentUI</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
@@ -34,7 +34,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Xamarin.Forms" Version="5.0.0.1487-pre1" />
+    <PackageReference Include="Xamarin.Forms" Version="5.0.0.1558-pre3" />
   </ItemGroup>
 
 </Project>
