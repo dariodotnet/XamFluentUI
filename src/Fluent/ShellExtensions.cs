@@ -102,5 +102,17 @@ namespace Fluent
             shell.FlyoutBackdrop = brush;
             return shell;
         }
+
+        public static Shell FlyoutFooter(this Shell shell, object footer)
+        {
+            shell.FlyoutFooter = footer;
+            return shell;
+        }
+
+        public static Shell FlyoutFooterTemplate(this Shell shell, DataTemplate template)
+        {
+            shell.FlyoutFooterTemplate = template;
+            return shell;
+        }
     }
 }
