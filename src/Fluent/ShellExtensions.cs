@@ -28,6 +28,18 @@ namespace Fluent
             return shell;
         }
 
+        public static Shell FlyoutContent(this Shell shell, View content)
+        {
+            shell.FlyoutContent = content;
+            return shell;
+        }
+
+        public static Shell FlyoutContentTemplate(this Shell shell, DataTemplate template)
+        {
+            shell.FlyoutContentTemplate = template;
+            return shell;
+        }
+
         public static Shell FlyoutHeader(this Shell shell, object header)
         {
             shell.FlyoutHeader = header;
@@ -55,6 +67,12 @@ namespace Fluent
             return shell;
         }
 
+        public static Shell FlyoutHeight(this Shell shell, double height)
+        {
+            shell.FlyoutHeight = height;
+            return shell;
+        }
+
         public static Shell FlyoutIsPresented(this Shell shell, bool presented)
         {
             shell.FlyoutIsPresented = presented;
@@ -65,6 +83,17 @@ namespace Fluent
         {
             shell.FlyoutIcon = source;
             return shell;
+        }
+
+        public static Shell FlyoutWidth(this Shell shell, double width)
+        {
+            shell.FlyoutWidth = width;
+            return shell;
+        }
+
+        public static Shell FlyoutSize(this Shell shell, double width, double height)
+        {
+            return shell.FlyoutWidth(width).FlyoutHeight(height);
         }
 
         public static Shell ItemTemplate(this Shell shell, DataTemplate template)

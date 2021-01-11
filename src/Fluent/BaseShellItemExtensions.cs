@@ -10,6 +10,12 @@ namespace Fluent
             return shell;
         }
 
+        public static T FlyoutItemIsVisible<T>(this T shell, bool isVisible) where T : BaseShellItem
+        {
+            shell.FlyoutItemIsVisible = isVisible;
+            return shell;
+        }
+
         public static T Icon<T>(this T shell, ImageSource icon) where T : BaseShellItem
         {
             shell.Icon = icon;
